@@ -1,3 +1,5 @@
+/*Code from Singolo1*/
+
 * {
     margin: 0;
     padding: 0;
@@ -12,36 +14,36 @@
     padding: 0 40px;
 }
 
-/**/
+/*Code from Singolo1*/
 
 .portfolio .wrapper {
     background-color: #2d303a;
     position: relative;
     z-index: 7;
     box-shadow: 0px 6px 0px #323746;
-    padding-bottom: 59px;
+    padding-bottom: 47px;
     padding-top: 60px;
 }
 
 h2 {
     font-family: 'Lato', sans-serif;
+    font-weight: 900;
     font-size: 30px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
 }
 
 .portfolio_description {
     font-family: 'Lato', sans-serif;
+    font-weight: 200;
     font-size: 18px;
-    word-spacing: -0.8px;
-    letter-spacing: -0.1px;
+    color: #767e9e;
     margin-top: 22px;
-    margin-left: 1px;
 }
 
 .tags ul {
     display: flex;
     margin: 15px 1px 19px;
-    font-size: 0.8rem;
+    font-size: 10px;
 }
 
 .tags ul li {
@@ -49,14 +51,17 @@ h2 {
     border: 1px solid #666d89;
     border-radius: 5px;
     margin-right: 10px;
-    padding: 2px 7px;
-    transition: all 0.5s;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: 0.5s linear;
 }
 
-.tags ul li:hover {
+.tags ul li:hover, .tags .active-tag {
     cursor: pointer;
-    color: #fff;
-    border-color: #fff;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .tags ul li:nth-child(4) {
@@ -64,11 +69,11 @@ h2 {
 }
 
 .tags ul li a {
-    font-family: 'LatoBold', sans-serif;
-    font-size: 0.7rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #767e9e;
     color: inherit;
     text-decoration: none;
-    word-spacing: 1px;
 }
 
 .layout-4-columns {
@@ -81,3 +86,72 @@ h2 {
     overflow: hidden;
 }
 
+.about-us .wrapper {
+    padding-top: 65px;
+    padding-bottom: 64px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 6px 0px #ffffff;
+}
+
+.about-us_description {
+    margin-top: 18px;
+    margin-bottom: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: #767e9e;
+    text-align: justify;
+    line-height: 30px;
+}
+
+/*Code from Singolo1*/
+
+.layout-3-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Code from Singolo1*/
+
+.employee {
+    max-width: 32%;
+}
+
+.employee>img {
+    width: 300px;
+    height: 300px;
+}
+
+.employee_info {
+    margin-top: 11px;
+}
+
+.employee_info h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.employee_info p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: justify;
+    word-spacing: -0.5px;
+    font-family: 'Lato', sans-serif;
+    color: #767e9e;
+    line-height: 20px;
+    margin-top: 9px;
+}
+
+.employee_contacts {
+    margin-top: 24px;
+}
+
+.employee_contacts a {
+    margin-right: 4px;
+}
