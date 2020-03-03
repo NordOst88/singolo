@@ -1,0 +1,17 @@
+/*Code from Singolo1*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'LatoBold', sans-serif;
+    box-sizing: border-box;
+    color: #666d89;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/*Code from Singolo1*/
