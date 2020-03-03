@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./singolo3.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <title>Singolo</title>
 </head>
 <body>
-    
+    <section class="get-quote">
+        <div class="wrapper">
+            <h2>Get a Quote</h2>
+            <p class="get-quote__description">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+            </p>
+            <div class="layout-2-columns">
+                <form action="" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Name (Required)" required>
+                    <input type="email" name="email" id="email" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="details" id="details" rows="12" placeholder="Describe your project in detail..."></textarea>
+                    <button name="submit">submit</button>
+                </form>
+                <div class="contacts-info">
+                    <h3>Contact Information</h3>
+                    <p class="contacts-info__description">
+                    Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh.
+                    Fusce vitae aliquam tellus. Proin sit amet volutpat libero.
+                    Nulla sed nunc et tortor luctus faucibus.
+                    Morbi at aliquet turpis, et consequat felis.
+                    </p>
+                    <div class="contacts-info__contacts">
+                        <p>
+                            <img src="./assets/img/icons/location.png" alt="Location">
+                            Elm St. 14/05 Lost City
+                        </p>
+                        <p>
+                            <img src="./assets/img/icons/phone.png" alt="Phone">
+                            <a href="tel:+035283318635">03528 331 86 35</a>
+                        </p>
+                        <p>
+                            <img src="./assets/img/icons/mail.png" alt="Email">
+                            <a href="mailto:info@singolo.com">info@singolo.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <span>&copy; Copyright 2013 · by PSDchat.com</span>
+            <div class="social">
+                <a href="#"><img src="./assets/img/social/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="./assets/img/social/Google.png" alt="Google"></a>
+                <a href="#"><img src="./assets/img/social/Twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="./assets/img/social/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

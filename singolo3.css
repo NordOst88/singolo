@@ -5,7 +5,6 @@
     padding: 0;
     font-family: 'LatoBold', sans-serif;
     box-sizing: border-box;
-    color: #666d89;
 }
 
 .wrapper {
@@ -15,3 +14,151 @@
 }
 
 /*Code from Singolo1*/
+
+.get-quote .wrapper {
+    color: #f0d8d9;
+    background-color: #f06c64;
+    box-shadow: 0px 6px 0px #ea676b;
+    position: relative;
+    z-index: 6;
+    padding-bottom: 0px;
+    padding-top: 59px;
+}
+
+.get-quote h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: -0.2px;
+}
+
+.get-quote__description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    padding: 18px 0px;
+    line-height: 30px;
+    word-spacing: 1px;
+}
+
+.layout-2-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+form {
+    width: 66%;
+    padding-top: 26px;
+    padding-bottom: 5px;
+    margin-right: 12px;
+}
+
+form input,
+form textarea,
+button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #f0d8d9;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    text-indent: 15px;
+    background-color: #d6564f;
+}
+
+button {
+    text-transform: uppercase;
+    line-height: 30px;
+    color: #f48c8f;
+  }
+
+button:hover {
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form input {
+    line-height: 38px;
+}
+
+form textarea {
+    padding-top: 10px;
+    line-height: 16px;
+    resize: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #f48c8f;
+}
+
+.contacts-info {
+    width: 33%;
+    padding-top: 24px;
+    padding-left: 9px;
+}
+
+.contacts-info h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    word-spacing: 1px;
+}
+
+.contacts-info__description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 21px;
+    padding-top: 8px;
+    word-spacing: -0.2px;
+}
+
+.contacts-info__contacts {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    margin-top: 28px;
+}
+
+.contacts-info__contacts img {
+    margin-right: 7px;
+}
+
+.contacts-info__contacts a {
+    text-decoration: none;
+    color: #f0d8d9;
+}
+
+.contacts-info__contacts p {
+    padding-bottom: 8px;
+}
+
+.footer .wrapper {
+    background-color: #2d303a;
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #666d89;
+    letter-spacing: -0.15px;
+    padding-top: 5px;
+    padding-left: 2px;
+}
+
+.footer img {
+    padding-top: 9px;
+    padding-left: 4px;
+}
