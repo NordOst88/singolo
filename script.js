@@ -6,6 +6,25 @@ menu.addEventListener('click', (event) => {
     event.target.classList.add('active');
 });
 
+document.addEventListener('scroll', onScroll)
+
+function onScroll(event) {
+	const curPos = window.scrollY;
+	const blocks = document.querySelectorAll('body>*');
+	const links = document.querySelectorAll('nav a');
+
+	blocks.forEach((el) =>{
+		if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos){
+			links.forEach((a) => {
+				a.classList.remove('active');
+				if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+					a.classList.add('active');
+				}
+			})
+		}
+	});
+};
+
 /* Slider. Активация экранов телефонов */
 
 const blackScreenVertical = document.querySelector('.black-screen-vertical');
@@ -138,8 +157,12 @@ document.querySelector('.tags__art').addEventListener('click', function() {
 const portfolioImages = document.querySelectorAll('.layout-4-columns img');
 
 portfolioImages.forEach(el => el.addEventListener('click', (event) => {
-    portfolioImages.forEach(el => el.classList.remove('selected-img'));
-    event.target.classList.add('selected-img');
+	if (el.classList.contains('selected-img')) {
+		el.classList.remove('selected-img');
+	} else {
+    	portfolioImages.forEach(el => el.classList.remove('selected-img'));
+		event.target.classList.add('selected-img');
+	};
 }));
 
 /* Get a quote */
@@ -174,4 +197,5 @@ closeButton.addEventListener('click', () => {
 	document.getElementById('subject-result').innerText = '';
 	document.getElementById('describe-result').innerText = '';
 	document.getElementById('message-block').classList.add('hidden');
+	document.getElementById('submit-form').reset();
 });

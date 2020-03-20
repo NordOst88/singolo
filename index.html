@@ -12,11 +12,11 @@
 		<div class="wrapper">
 			<h1>Singolo</h1>
 			<nav class="nav">
-				<a class="nav__link active" href="#">Home</a>
+				<a class="nav__link active" href="#slider">Home</a>
 				<a class="nav__link" href="#services">Services</a>
 				<a class="nav__link" href="#portfolio">Portfolio</a>
 				<a class="nav__link" href="#about-us">About</a>
-				<a class="nav__link" href="#contacts-info">Contact</a>
+				<a class="nav__link" href="#get-quote">Contact</a>
 			</nav>
 		</div>
 	</header>
@@ -204,12 +204,12 @@
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="layout-2-columns">
-                <form action="" method="POST" onsubmit="return false;">
+                <form id ="submit-form" action="" method="POST" onsubmit="return false;">
                     <input type="text" name="name" id="name" placeholder="Name (Required)" required>
                     <input type="email" name="email" id="email" placeholder="Email (Required)" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
-                    <textarea name="details" id="details" rows="12" placeholder="Describe your project in detail..."></textarea>
-                    <button name="submit" id="submit">submit</button>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" maxlength="70">
+                    <textarea name="details" id="details" rows="12" placeholder="Describe your project in detail..." maxlength="250"></textarea>
+                    <button name="submit" id="submit">send</button>
                 </form>
                 <div id="message-block" class="hidden">
 					<div id="message">
@@ -222,9 +222,9 @@
 						</div>
 						<br>
 						<button id="close-btn">Ok</button>
-					</div>
+                    </div>  
 				</div>
-                <div class="contacts-info" id="contacts-info">
+                <div class="contacts-info">
                     <h3>Contact Information</h3>
                     <p class="contacts-info__description">
                     Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh.
