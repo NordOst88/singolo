@@ -27,9 +27,9 @@ function onScroll(event) {
 
 /* Slider. Активация экранов телефонов */
 
-const blackScreenVertical = document.querySelector('.black-screen-vertical');
-const blackScreenHorizontal = document.querySelector('.black-screen-horizontal');
-const screensContainer = document.querySelector('.screens-container');
+const blackScreenVertical = document.querySelector('.black-screen.vertical');
+const blackScreenVertical2 = document.querySelector('.black-screen.vertical2');
+const blackScreenHorizontal = document.querySelector('.black-screen.horizontal');
 
 document.querySelector('.iPhone.iPhone_vertical').addEventListener('click', (event) => {
     if (blackScreenVertical.style.display == 'none') {
@@ -43,12 +43,16 @@ blackScreenVertical.addEventListener('click',(event) => {
     blackScreenVertical.style.display = 'none';
 });
 
-screensContainer.addEventListener('click',(event) => {
-    if (blackScreenVertical.style.display == 'none') {
-        blackScreenVertical.style.display = 'block';
+document.querySelector('.iPhone.iPhone_vertical2').addEventListener('click', (event) => {
+    if (blackScreenVertical2.style.display == 'none') {
+        blackScreenVertical2.style.display = 'block';
     } else {
-        blackScreenVertical.style.display = 'none';
+        blackScreenVertical2.style.display = 'none';
     }
+});
+
+blackScreenVertical2.addEventListener('click',(event) => {
+    blackScreenVertical2.style.display = 'none';
 });
 
 document.querySelector('.iPhone.iPhone_horizontal').addEventListener('click', (event) => {
@@ -65,7 +69,7 @@ blackScreenHorizontal.addEventListener('click',(event) => {
 
 /* Slider. Переключение слайдов */
 
-let items = document.querySelectorAll('.screens-container .item');
+let items = document.querySelectorAll('.slides-container .item');
 let currentItem = 0;
 let isEnabled = true;
 
