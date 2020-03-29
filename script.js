@@ -14,14 +14,19 @@ function onScroll(event) {
 	const links = document.querySelectorAll('nav a');
 
 	blocks.forEach((el) =>{
-		if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos){
+		if (el.offsetTop - 30 <= curPos && (el.offsetTop + el.offsetHeight - 30) > curPos){
 			links.forEach((a) => {
 				a.classList.remove('active');
 				if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
 					a.classList.add('active');
 				}
 			})
-		}
+		} else if (document.documentElement.scrollHeight - document.documentElement.clientHeight <= window.pageYOffset) {
+            links.forEach( a => {
+              a.classList.remove('active');
+            });
+            links[links.length - 1].classList.add('active');
+        }
 	});
 };
 
@@ -127,33 +132,33 @@ tags.addEventListener('click', (event) => {
     event.target.classList.add('active');
 });
 
-function itemsOrder(n) {
-	let itemsInRow = 4;
-	let nthChilds = [];
-	for (let i = 1; i <= itemsInRow; i++) {
-		nthChilds = document.querySelectorAll(`.layout-4-columns img:nth-child(${i})`);
-		if (i < n) {
-			nthChilds.forEach(el => el.style.order = i);
-		} else {
-			nthChilds.forEach(el => el.style.order = i - itemsInRow);
-		}; 
+document.querySelector('.tags').addEventListener('click', function() {
+
+	let images = Array.from(document.querySelectorAll('.layout-4-columns img'));
+	images = shuffleCollection(images);
+	images.forEach( el => document.querySelector('.layout-4-columns').append(el) );
+
+	function shuffleCollection(array) {
+
+		return array.sort(shuffle());
+
+		function shuffle() {
+			let tempArr = [];
+			return function(a, b) {
+				putToTempArr(a, tempArr);
+				putToTempArr(b, tempArr);
+				return tempArr.indexOf(b) - tempArr.indexOf(a);
+			};
+		};
+
+		function putToTempArr(el, tempArr) {
+			if (tempArr.indexOf(el) !== -1) {
+				return;
+			};
+			let rndPos = Math.round(Math.random()*(tempArr.length + 1));
+			tempArr.splice(rndPos, 0, el);
+		};
 	};
-};
-
-document.querySelector('.tags__all').addEventListener('click', function() {
-	document.querySelectorAll('.layout-4-columns img').forEach(el => el.style.order = 0);
-});
-
-document.querySelector('.tags__web').addEventListener('click', function() {
-	itemsOrder(4);
-});
-
-document.querySelector('.tags__graphic').addEventListener('click', function() {
-	itemsOrder(3);
-});
-
-document.querySelector('.tags__art').addEventListener('click', function() {
-	itemsOrder(2);
 });
 
 /* Portfolio. Взаимодействие с картинками */
@@ -203,3 +208,22 @@ closeButton.addEventListener('click', () => {
 	document.getElementById('message-block').classList.add('hidden');
 	document.getElementById('submit-form').reset();
 });
+
+/* Burger menu */
+
+document.querySelector('.burger').addEventListener('click', (e) => {
+	e.currentTarget.classList.add('active');
+	document.querySelector('.nav-block').classList.add('active');
+	document.querySelector('.nav').classList.add('active');
+	document.querySelector('h1').classList.add('active');
+});
+
+document.addEventListener('click', (e) => {
+	let isBurgerActive = document.querySelector('.burger').classList.contains('active');
+	if (isBurgerActive && e.target.tagName === 'A' || e.target.tagName === 'NAV') {
+		document.querySelector('.burger').classList.remove('active');
+		document.querySelector('.nav-block').classList.remove('active');
+		document.querySelector('.nav').classList.remove('active');
+		document.querySelector('h1').classList.remove('active');
+	}
+}, true);

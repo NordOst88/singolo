@@ -40,6 +40,12 @@ header .wrapper {
     justify-content: center;
 }
 
+.burger {
+    display: none;
+    transition: 0.9s ease-in-out;
+    cursor: pointer;
+}
+
 .nav {
     margin-top: 14px;
 }
@@ -96,7 +102,7 @@ h1::after {
 
 .arrow {
     position: absolute;
-    top: 287px;
+    top: 48%;
     cursor: pointer;
 }
 
@@ -114,24 +120,27 @@ h1::after {
 }
 
 .iPhone_vertical {
-    left: 112px;
-    top: 53px;
+    left: 11%;
+    width: 23.5%;
+    top: 8.9%;
 }
 
 .iPhone_vertical2 {
-    left: 383px;
-    top: 43px;
+    left: 37.6%;
+    top: 7%;
+    width: 25%;
 }
 
 .iPhone_horizontal {
-    right: 111px;
-    top: 174px;
+    right: 10.8%;
+    top: 29%;
+    width: 47.5%;
 }
 
 .slides-container {
     position: relative;
-    width: 1020px;
-    height: 594px;
+    width: 100%;
+    height: 100%;
     top: 6px;
     overflow: hidden;
 }
@@ -141,6 +150,13 @@ h1::after {
     position: relative;
     animation: 0.2s ease-in-out;
     margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-background {
+    width: 100%;
+    height: 100%;
 }
 
 .current,
@@ -197,19 +213,21 @@ h1::after {
 }
 
 .black-screen.vertical {
-    left: 125px;
-    top: 118px;
+    left: 12.2%;
+    width: 18.6%;
+    top: 19.45%;
 }
 
 .black-screen.vertical2 {
-    left: 397px;
-    top: 112px;
-    width: 201px;
+    left: 38.9%;
+    top: 18.3%;
+    width: 19.8%;
 }
 
 .black-screen.horizontal {
-    right: 202px;
-    top: 187px;
+    right: 19.7%;
+    top: 31.1%;
+    width: 32.9%;
 }
 
 .services .wrapper {
@@ -257,13 +275,15 @@ h1::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .services-item {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    max-width: 32%;
+    width: 300px;
     color: #666d89;
     margin-bottom: 33px;
 }
@@ -308,7 +328,7 @@ h1::after {
     position: relative;
     z-index: 7;
     box-shadow: 0px 6px 0px #323746;
-    padding-bottom: 47px;
+    padding-bottom: 40px;
     padding-top: 59px;
 }
 
@@ -335,9 +355,13 @@ h2 {
     margin-top: 22px;
 }
 
+.tags {
+    margin-bottom: 20px;
+}
+
 .tags ul {
     display: flex;
-    margin: 15px 1px 19px;
+    margin: 15px 1px 9px;
     font-size: 10px;
 }
 
@@ -369,12 +393,20 @@ h2 {
 
 .layout-4-columns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-    max-height: 187px;
+    margin-bottom: 7px;
     overflow: hidden;
+}
+
+.layout-4-columns img {
+    flex: 1 0 23%;
+    margin: 0 20px 20px 0;
+    width: 23%;
+}
+
+.layout-4-columns img:nth-child(4n) {
+    margin-right: 0;
 }
 
 .layout-4-columns img:hover {
@@ -388,7 +420,7 @@ h2 {
 
 .about-us .wrapper {
     padding-top: 65px;
-    padding-bottom: 63px;
+    padding-bottom: 62px;
     background-color: #f2f2f2;
     box-shadow: 0px 6px 0px #ffffff;
     position: relative;
@@ -414,12 +446,11 @@ h2 {
 }
 
 .employee {
-    max-width: 32%;
+    width: 32%;
 }
 
 .employee>img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
 }
 
 .employee_info {
@@ -495,7 +526,6 @@ h2 {
 .layout-2-columns {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 form {
@@ -503,6 +533,7 @@ form {
     padding-top: 26px;
     padding-bottom: 5px;
     margin-right: 12px;
+    flex: 1 0 64%;
 }
 
 form input,
@@ -525,6 +556,7 @@ button {
     text-transform: uppercase;
     line-height: 30px;
     color: #f48c8f;
+    text-indent: 0;
   }
 
 button:hover {
@@ -663,4 +695,447 @@ form textarea::placeholder {
 .footer img {
     padding-top: 9px;
     padding-left: 4px;
+}
+
+/*tablet resolution*/
+
+@media (max-width: 1019px) {
+    header .wrapper {
+        box-shadow: 0px 4.52px 0px #323746;
+        height: 90px;
+    }
+    h1 {
+        margin-bottom: 2.42px;
+    }
+    .nav {
+        margin-top: 5px;
+    }
+
+    .slider .wrapper {
+        height: calc(100vw * 0.59);
+        box-shadow: 0px 4.52px 0px #ea676b;
+    }
+    .arrow.arrow_prev {
+        left: 30px;
+    }
+    .arrow.arrow_next {
+        right: 30px;
+    }
+    .slides-container {
+        top: 2px;
+    }
+    .slide-background {
+        height: calc(100% + 4.52px);
+    }
+    .iPhone_vertical {
+        top: 10%;
+    }
+    .iPhone_horizontal {
+        top: 30%;
+    }
+    .black-screen.vertical {
+        left: 12.1%;
+        width: 18.7%;
+        top: 20.5%;
+    }
+    .black-screen.horizontal {
+        right: 19.6%;
+        top: 32%;
+        width: 33.1%;
+    }
+
+    .services .wrapper {
+        box-shadow: 0px 4.52px 0px #ffffff;
+        padding-top: 43px;
+        padding-left: 41px;
+        padding-bottom: 16px;
+        margin-bottom: 6px;
+    }
+    .services_description {
+        -webkit-line-clamp: 3;
+        text-align: start;
+        margin-bottom: 38px;
+    }
+    .services .layout-3-columns{
+        padding-right: 8px;
+    }
+    .services-item {
+        margin: 0px 3.9% 54px 0;
+    }
+
+    .portfolio .wrapper {
+        box-shadow: 0px 7.6px 0px #323746;
+    }
+    .portfolio_description {
+        line-height: 30px;
+        word-spacing: 3px;
+        margin-top: 19px;
+    }
+    .tags {
+        margin-bottom: 28px;
+    }
+    .tags ul {
+        margin: 11px 1px 18px;
+    }
+    .layout-4-columns {
+        margin-bottom: 4px;
+    }
+
+    .layout-4-columns img {
+        width: 30%;
+        flex: 1 0 30%;
+    }
+
+    .layout-4-columns img:nth-child(3n){
+        margin-right: 0;
+    }
+
+    .layout-4-columns img:nth-child(4n){
+        margin-right: 20px;
+    }
+
+    .layout-4-columns img:last-child {
+        margin-right: 0;
+    }
+
+    .about-us .wrapper {
+        box-shadow: 0px 4.52px 0px #ffffff;
+        padding: 59px 40px 68px;
+    }
+    .about-us .layout-3-columns {
+        padding-left: 2px;
+    }
+    .employee_info {
+        margin-top: 6px;
+    }
+    .employee_contacts {
+        margin-top: 12px;
+    }
+    .employee_info p  {
+        margin-top: 1px;
+    }
+    .about-us_description {
+        margin-bottom: 39px;
+    }
+
+    .get-quote .wrapper {
+        box-shadow: 0px 4.52px 0px #ea676b;
+        padding-top: 57px;
+        padding-bottom: 28px;
+    }
+    form {
+        padding-top: 8px;
+        flex-basis: 64%;
+    }
+    .contacts-info {
+        padding-top: 6px;
+        padding-left: 17px;
+        width: 100%;
+    }
+    .contacts-info__description {
+        line-height: 22px;
+        padding-top: 1px;
+    }
+    .contacts-info__contacts {
+        margin-top: 12px;
+    }
+    form input {
+        margin-bottom: 12px;
+        text-indent: 10px;
+    }
+    form textarea {
+        height: 159px;
+        padding-top: 7px;
+        text-indent: 10px;
+    }
+    #message-block {
+        top: 4.52px;
+    }
+
+    .footer span {
+        font-weight: 900;
+        font-size: 13px;
+        padding-left: 0;
+    }
+}
+
+/*mobie resolution*/
+
+@media (max-width: 767px) {
+    header .wrapper {
+        box-shadow: 0px 0px 0px #323746;
+        height: 71px;
+        justify-content: center;
+        padding-left: 50px;
+    }
+    .burger {
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        left: 20px;
+        z-index: 11;
+    }
+    .burger.active {
+        transform: rotate(270deg);
+        transition: 0.9s ease-in-out;
+    }
+    .burger__line {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background: #f2f2f2;
+        border-radius: 5px;
+        height: 2px;
+        width: 100%;
+        top: calc( 50% - 1px );
+        left: 0;
+    }
+    .burger::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background: #f2f2f2;
+        border-radius: 5px;
+        height: 2px;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .burger::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background: #f2f2f2;
+        border-radius: 5px;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    .nav-block {
+        position: fixed;
+        display: block;
+        width: 100vh;
+        height: 100vh;
+        left: -100vh;
+        top: 0;
+        background-color: rgba(45, 48, 58, 0.6);
+        overflow: hidden;
+    }
+    .nav-block.active {
+        left: 0;
+        width: 100vw;
+        z-index: 9;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+        height: 100vh;
+        left: -100vh;
+        padding-top: 218px;
+        position: fixed;
+        top: 0;
+        padding-left: 20px;
+        background: #2d303a;
+        transition: 0.3s;
+        margin-top: 0;
+        box-shadow: inset 0px 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .nav.active {
+        left: 0;
+        width: 74%;
+    }
+    .nav__link {
+        font-size: 24px;
+        line-height: 3.6rem;
+        font-weight: bold;
+        padding-left: 51px;
+        margin: 0;
+    }
+    .nav__link::after {
+        content: '';
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: -0.03em;
+        z-index: 11;
+        margin-bottom: 0;
+    }    
+    h1.active {
+        margin-right: 53%;
+        color: #fff;
+    }
+
+
+    .slider .wrapper {
+        height: calc(100vw * 0.58);
+        box-shadow: 0px 2.21px 0px #ea676b;
+    }
+    #slider:before{
+        height: 71px;
+    }
+    .arrow.arrow_prev {
+        left: 10px;
+        width: 14px;
+        top: 45%;
+    }
+    .arrow.arrow_next {
+        right: 10px;
+        width: 14px;
+        top: 45%;
+    }
+    .slides-container {
+        top: 0px;
+    }
+    .iPhone_vertical {
+        top: 9%;
+    }
+
+    .black-screen.vertical {
+        top: 19.85%;
+    }
+
+    .services .wrapper {
+        box-shadow: 0px 0px 0px #ffffff;
+        padding: 27px 29px 24px 32px;
+        margin-bottom: 0px;
+    }
+    #services:before{
+        height: 71px;
+        margin: -71px 0 0;
+    }
+    .services_description {
+        -webkit-line-clamp: 7;
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    .services .layout-3-columns{
+        padding-right: 0;
+    }
+    .services-item {
+        margin: 0 calc((100% - 314px) / 2) 30px;
+    }
+    .services-item:last-child {
+        margin-bottom:  0;
+    }
+
+    .portfolio .wrapper {
+        box-shadow: 0px 0px 0px #323746;
+        padding: 42px 30px;
+        padding-bottom: 26px;
+    }
+    #portfolio:before{
+        height: 71px;
+        margin: -71px 0 0;
+    }
+    .portfolio_description {
+        margin-top: 18px;
+        word-spacing: 0;
+        letter-spacing: 0.19px;
+    }
+    .tags {
+        margin-bottom: 25px;
+    }
+    .tags ul {
+        margin-top: 17px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+    }
+    .layout-4-columns {
+        margin-bottom: 0;
+    }
+
+    .layout-4-columns img{
+        flex: 1 0 44%;
+        margin: 0 13px 14px 0;
+    }
+
+    .layout-4-columns img:nth-child(4n) {
+        margin-right: 13px;
+    }
+    .layout-4-columns img:nth-child(3n) {
+        margin-right: 13px;
+    }
+    .layout-4-columns img:nth-child(2n) {
+        margin-right: 0;
+    }
+    .layout-4-columns img:nth-child(n+9) {
+        display: none;
+    }
+
+    .about-us .wrapper {
+        box-shadow: 0px 0px 0px #ffffff;
+        padding: 33px 30px 11px;
+    }
+    #about-us:before{
+        height: 71px;
+        margin: -71px 0 0;
+    }
+    .about-us_description {
+        text-align: left;
+        letter-spacing: 0.4px;
+        margin-bottom: 24px;
+    }
+    .about-us .layout-3-columns {
+        padding-left: 1px;
+        display: block;
+    }
+    .employee {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding-bottom: 31px;
+    }
+    .employee_info {
+        margin-top: 12px;
+    }
+
+    .get-quote .wrapper {
+        box-shadow: 0px 0px 0px #ea676b;
+        padding: 44px 30px 31px;
+    }
+    #get-quote:before{
+        height: 71px;
+        margin: -71px 0 0;
+    }
+    .get-quote__description {
+        text-align: left;
+        padding-bottom: 16px;;
+    }
+    .get-quote .layout-2-columns{
+        flex-wrap: wrap;
+    }
+    form {
+        margin-right: 0;
+        padding-top: 7px;
+    }
+    form input, form textarea {
+        text-indent: 7px;
+    }
+    .contacts-info {
+        padding-top: 27px;
+        padding-left: 0px;
+        width: 100%;
+    }
+    .contacts-info__contacts {
+        margin-top: 14px;
+    }
+    .contacts-info__contacts p {
+        padding-bottom: 11px;
+    }
+    #message-block {
+        top: 0px;
+    }
+    
+    .footer .wrapper {
+        justify-content: center;
+        height: 76px;
+    }
+    .footer span {
+        display: none;
+    }
+
 }
