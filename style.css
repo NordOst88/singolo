@@ -1014,9 +1014,10 @@ form textarea::placeholder {
     }
     .services .layout-3-columns{
         padding-right: 0;
+        margin: 0 calc((100% - 314px) / 2) 30px;
     }
     .services-item {
-        margin: 0 calc((100% - 314px) / 2) 30px;
+        margin-bottom: 30px;
     }
     .services-item:last-child {
         margin-bottom:  0;
@@ -1138,4 +1139,8 @@ form textarea::placeholder {
         display: none;
     }
 
+}
+@media (max-width: 374px) {
+    .services .layout-3-columns {
+        margin: auto;
 }

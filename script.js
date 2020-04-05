@@ -212,15 +212,15 @@ closeButton.addEventListener('click', () => {
 /* Burger menu */
 
 document.querySelector('.burger').addEventListener('click', (e) => {
-	e.currentTarget.classList.add('active');
-	document.querySelector('.nav-block').classList.add('active');
-	document.querySelector('.nav').classList.add('active');
-	document.querySelector('h1').classList.add('active');
+	e.currentTarget.classList.toggle('active');
+	document.querySelector('.nav-block').classList.toggle('active');
+	document.querySelector('.nav').classList.toggle('active');
+	document.querySelector('h1').classList.toggle('active');
 });
 
 document.addEventListener('click', (e) => {
 	let isBurgerActive = document.querySelector('.burger').classList.contains('active');
-	if (isBurgerActive && e.target.tagName === 'A' || e.target.tagName === 'NAV') {
+	if (isBurgerActive && e.target.tagName === 'A') {
 		document.querySelector('.burger').classList.remove('active');
 		document.querySelector('.nav-block').classList.remove('active');
 		document.querySelector('.nav').classList.remove('active');
